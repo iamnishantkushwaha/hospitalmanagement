@@ -2,10 +2,11 @@ import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
+import { authConfig } from "@/lib/auth.config";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
+  ...authConfig,
   session: { strategy: "jwt" },
-  pages: { signIn: "/login" },
   providers: [
     Credentials({
       credentials: {
@@ -28,6 +29,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     }),
   ],
   callbacks: {
+    ...authConfig.callbacks,
     jwt: async ({ token, user }) => {
       if (user) {
         token.role = user.role;

@@ -24,7 +24,7 @@ export default async function LabOrderDetailPage({ params }: { params: Promise<{
         <CardHeader className="flex items-center justify-between">
           <div>
             <p className="font-mono text-xs text-slate-500">{order.orderNo}</p>
-            <Link href={`/patients/${order.patientId}`} className="text-sm font-semibold text-slate-800 hover:text-teal-700">
+            <Link href={`/patients/${order.patientId}`} className="text-sm font-semibold text-slate-800 hover:text-blue-800">
               {order.patient.firstName} {order.patient.lastName}
             </Link>
             <p className="text-xs text-slate-500">Ordered by Dr. {order.doctor.user.name} on {order.orderedAt.toLocaleDateString()}</p>
@@ -44,10 +44,10 @@ export default async function LabOrderDetailPage({ params }: { params: Promise<{
                 name="resultValue"
                 defaultValue={item.result?.resultValue ?? ""}
                 placeholder="Result value"
-                className="rounded-md border border-slate-300 px-2.5 py-1.5 text-sm outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600 sm:col-span-5"
+                className="rounded-md border border-slate-300 px-2.5 py-1.5 text-sm outline-none focus:border-blue-700 focus:ring-1 focus:ring-blue-700 sm:col-span-5"
               />
               <label className="flex items-center gap-1.5 text-xs text-slate-600 sm:col-span-2">
-                <input type="checkbox" name="isNormal" defaultChecked={item.result?.isNormal ?? true} className="accent-teal-600" />
+                <input type="checkbox" name="isNormal" defaultChecked={item.result?.isNormal ?? true} className="accent-blue-700" />
                 Normal
               </label>
               <button type="submit" className="rounded-md bg-slate-800 px-3 py-1.5 text-xs font-medium text-white hover:bg-slate-900 sm:col-span-2">

@@ -75,7 +75,7 @@ export default async function DoctorDetailPage({ params }: { params: Promise<{ i
                   {todaysAppointments.map((appt) => (
                     <li key={appt.id} className="flex items-center justify-between py-2 text-sm">
                       <div>
-                        <Link href={`/patients/${appt.patientId}`} className="font-medium text-slate-800 hover:text-teal-700">
+                        <Link href={`/patients/${appt.patientId}`} className="font-medium text-slate-800 hover:text-blue-800">
                           {appt.patient.firstName} {appt.patient.lastName}
                         </Link>
                         <p className="text-slate-500">{appt.timeSlot}</p>
@@ -100,7 +100,7 @@ export default async function DoctorDetailPage({ params }: { params: Promise<{ i
                   {recentConsultations.map((c) => (
                     <li key={c.id} className="py-2 text-sm">
                       <div className="flex items-center justify-between">
-                        <Link href={`/patients/${c.patientId}`} className="font-medium text-slate-800 hover:text-teal-700">
+                        <Link href={`/patients/${c.patientId}`} className="font-medium text-slate-800 hover:text-blue-800">
                           {c.patient.firstName} {c.patient.lastName}
                         </Link>
                         <span className="text-xs text-slate-400">{c.createdAt.toLocaleDateString()}</span>

@@ -32,12 +32,12 @@ export default async function LabReportsPage() {
               {orders.map((order) => (
                 <tr key={order.id} className="hover:bg-slate-50">
                   <td className="px-4 py-2.5">
-                    <Link href={`/laboratory/orders/${order.id}`} className="font-mono text-xs text-teal-700 hover:underline">
+                    <Link href={`/laboratory/orders/${order.id}`} className="font-mono text-xs text-blue-800 hover:underline">
                       {order.orderNo}
                     </Link>
                   </td>
                   <td className="px-4 py-2.5">
-                    <Link href={`/patients/${order.patientId}`} className="font-medium text-slate-800 hover:text-teal-700">
+                    <Link href={`/patients/${order.patientId}`} className="font-medium text-slate-800 hover:text-blue-800">
                       {order.patient.firstName} {order.patient.lastName}
                     </Link>
                   </td>

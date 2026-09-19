@@ -24,7 +24,7 @@ export default async function InvoiceDetailPage({ params }: { params: Promise<{ 
     <div className="mx-auto max-w-2xl space-y-4">
       <Card>
         <CardHeader className="flex items-center justify-between print:hidden">
-          <Link href="/billing/invoices" className="text-sm text-slate-500 hover:text-teal-700">
+          <Link href="/billing/invoices" className="text-sm text-slate-500 hover:text-blue-800">
             ← Back to Invoices
           </Link>
           <PrintButton />

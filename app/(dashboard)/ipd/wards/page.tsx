@@ -28,7 +28,7 @@ export default async function WardsPage() {
                   <span>{occupancyPct}%</span>
                 </div>
                 <div className="mt-1 h-2 w-full rounded-full bg-slate-100">
-                  <div className="h-2 rounded-full bg-teal-600" style={{ width: `${occupancyPct}%` }} />
+                  <div className="h-2 rounded-full bg-blue-700" style={{ width: `${occupancyPct}%` }} />
                 </div>
               </div>
               <div className="grid grid-cols-3 gap-2 text-center text-xs">

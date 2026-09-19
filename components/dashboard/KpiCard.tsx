@@ -13,7 +13,7 @@ export function KpiCard({
   accent?: "teal" | "amber" | "rose" | "sky" | "violet";
 }) {
   const accentClasses: Record<string, string> = {
-    teal: "bg-teal-50 text-teal-600",
+    teal: "bg-blue-50 text-blue-700",
     amber: "bg-amber-50 text-amber-600",
     rose: "bg-rose-50 text-rose-600",
     sky: "bg-sky-50 text-sky-600",

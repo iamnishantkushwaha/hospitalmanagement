@@ -63,7 +63,7 @@ export default async function AppointmentsPage({
             </Link>
             <Link
               href="/appointments/new"
-              className="inline-flex items-center gap-1.5 rounded-md bg-teal-600 px-3 py-2 text-sm font-medium text-white hover:bg-teal-700"
+              className="inline-flex items-center gap-1.5 rounded-md bg-blue-700 px-3 py-2 text-sm font-medium text-white hover:bg-blue-800"
             >
               <CalendarPlus className="h-4 w-4" />
               New Appointment
@@ -79,7 +79,7 @@ export default async function AppointmentsPage({
             href={`/appointments?range=${r.key}`}
             className={cn(
               "rounded-md px-3 py-1.5 text-sm font-medium transition",
-              range === r.key ? "bg-teal-600 text-white" : "text-slate-600 hover:bg-slate-100"
+              range === r.key ? "bg-blue-700 text-white" : "text-slate-600 hover:bg-slate-100"
             )}
           >
             {r.label}
@@ -111,12 +111,12 @@ export default async function AppointmentsPage({
                       <span className="block text-xs text-slate-400">{appt.timeSlot}</span>
                     </td>
                     <td className="px-4 py-2.5">
-                      <Link href={`/patients/${appt.patientId}`} className="font-medium text-slate-800 hover:text-teal-700">
+                      <Link href={`/patients/${appt.patientId}`} className="font-medium text-slate-800 hover:text-blue-800">
                         {appt.patient.firstName} {appt.patient.lastName}
                       </Link>
                     </td>
                     <td className="px-4 py-2.5 text-slate-700">
-                      <Link href={`/doctors/${appt.doctorId}`} className="hover:text-teal-700">
+                      <Link href={`/doctors/${appt.doctorId}`} className="hover:text-blue-800">
                         Dr. {appt.doctor.user.name}
                       </Link>
                     </td>

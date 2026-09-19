@@ -23,7 +23,7 @@ export default async function DoctorsPage() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {doctors.map((doctor) => (
             <Link key={doctor.id} href={`/doctors/${doctor.id}`}>
-              <Card className="h-full transition hover:border-teal-300 hover:shadow-md">
+              <Card className="h-full transition hover:border-blue-300 hover:shadow-md">
                 <div className="p-4">
                   <div className="flex items-center gap-3">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-violet-100 text-sm font-semibold text-violet-700">
@@ -40,7 +40,7 @@ export default async function DoctorsPage() {
                   </div>
                   <div className="mt-3 flex items-center justify-between border-t border-slate-100 pt-3 text-sm">
                     <span className="text-slate-500">Fee: ₹{Number(doctor.consultationFee).toLocaleString("en-IN")}</span>
-                    <span className="font-medium text-teal-700">{doctor._count.appointments} appts</span>
+                    <span className="font-medium text-blue-800">{doctor._count.appointments} appts</span>
                   </div>
                 </div>
               </Card>

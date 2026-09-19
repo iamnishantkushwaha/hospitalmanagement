@@ -32,7 +32,7 @@ export default async function PaymentsPage() {
                 <tr key={payment.id} className="hover:bg-slate-50">
                   <td className="px-4 py-2.5 text-slate-500">{payment.paidAt.toLocaleDateString()}</td>
                   <td className="px-4 py-2.5">
-                    <Link href={`/billing/invoices/${payment.invoiceId}`} className="font-mono text-xs text-teal-700 hover:underline">
+                    <Link href={`/billing/invoices/${payment.invoiceId}`} className="font-mono text-xs text-blue-800 hover:underline">
                       {payment.invoice.invoiceNo}
                     </Link>
                   </td>

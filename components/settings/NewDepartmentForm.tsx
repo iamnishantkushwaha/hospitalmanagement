@@ -4,7 +4,7 @@ import { useActionState } from "react";
 import { createDepartmentAction } from "@/lib/actions/settings-actions";
 
 const inputClass =
-  "w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600";
+  "w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 outline-none focus:border-blue-700 focus:ring-1 focus:ring-blue-700";
 
 export function NewDepartmentForm({ hospitalId }: { hospitalId: string }) {
   const [state, formAction, isPending] = useActionState(createDepartmentAction, undefined);
@@ -20,7 +20,7 @@ export function NewDepartmentForm({ hospitalId }: { hospitalId: string }) {
       <button
         type="submit"
         disabled={isPending}
-        className="w-full rounded-md bg-teal-600 px-3 py-2 text-sm font-medium text-white hover:bg-teal-700 disabled:opacity-60"
+        className="w-full rounded-md bg-blue-700 px-3 py-2 text-sm font-medium text-white hover:bg-blue-800 disabled:opacity-60"
       >
         {isPending ? "Adding..." : "Add Department"}
       </button>

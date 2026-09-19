@@ -27,7 +27,7 @@ function Field({
 }
 
 const inputClass =
-  "w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600";
+  "w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 outline-none focus:border-blue-700 focus:ring-1 focus:ring-blue-700";
 
 export function PatientForm() {
   const [state, formAction, isPending] = useActionState(createPatientAction, undefined);
@@ -113,7 +113,7 @@ export function PatientForm() {
         <button
           type="submit"
           disabled={isPending}
-          className="rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700 disabled:opacity-60"
+          className="rounded-md bg-blue-700 px-4 py-2 text-sm font-medium text-white hover:bg-blue-800 disabled:opacity-60"
         >
           {isPending ? "Registering..." : "Register Patient"}
         </button>

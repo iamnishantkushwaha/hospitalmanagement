@@ -52,7 +52,7 @@ export default async function OpdQueuePage() {
                   <tr key={appt.id} className="hover:bg-slate-50">
                     <td className="px-4 py-2.5 text-slate-600">{appt.timeSlot}</td>
                     <td className="px-4 py-2.5">
-                      <Link href={`/patients/${appt.patientId}`} className="font-medium text-slate-800 hover:text-teal-700">
+                      <Link href={`/patients/${appt.patientId}`} className="font-medium text-slate-800 hover:text-blue-800">
                         {appt.patient.firstName} {appt.patient.lastName}
                       </Link>
                       <span className="block font-mono text-xs text-slate-400">{appt.patient.mrn}</span>
@@ -67,7 +67,7 @@ export default async function OpdQueuePage() {
                         {appt.status === "IN_CONSULTATION" && (
                           <Link
                             href={`/opd/consultation/${appt.id}`}
-                            className="inline-flex items-center gap-1 rounded-md bg-teal-600 px-2 py-1 text-xs font-medium text-white hover:bg-teal-700"
+                            className="inline-flex items-center gap-1 rounded-md bg-blue-700 px-2 py-1 text-xs font-medium text-white hover:bg-blue-800"
                           >
                             <Stethoscope className="h-3 w-3" />
                             Open Consultation
@@ -90,7 +90,7 @@ export default async function OpdQueuePage() {
             <ul className="divide-y divide-slate-100">
               {completed.map((appt) => (
                 <li key={appt.id} className="flex items-center justify-between px-4 py-2.5 text-sm">
-                  <Link href={`/patients/${appt.patientId}`} className="font-medium text-slate-700 hover:text-teal-700">
+                  <Link href={`/patients/${appt.patientId}`} className="font-medium text-slate-700 hover:text-blue-800">
                     {appt.patient.firstName} {appt.patient.lastName}
                   </Link>
                   <span className="text-slate-500">Dr. {appt.doctor.user.name} · {appt.timeSlot}</span>

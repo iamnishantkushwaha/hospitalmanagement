@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS, HOSPITAL_NAME } from "@/lib/constants";
@@ -11,12 +12,19 @@ export function Sidebar({ role, onNavigate }: { role: UserRole; onNavigate?: () 
   const items = NAV_ITEMS.filter((item) => item.roles.includes(role));
 
   return (
-    <div className="flex h-full flex-col bg-slate-900 text-slate-200">
-      <div className="flex h-16 items-center gap-2 border-b border-slate-800 px-5">
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-500 text-sm font-bold text-white">
-          H
-        </div>
-        <span className="truncate text-sm font-semibold text-white">{HOSPITAL_NAME}</span>
+    <div className="flex h-full flex-col bg-slate-950 text-slate-200">
+      <div className="border-b border-slate-800 px-5 pb-4 pt-5">
+        <Image
+          src="/adrs-logo-light.png"
+          alt="ADRS Techno – Innovative & Tech"
+          width={470}
+          height={220}
+          priority
+          className="mx-auto h-auto w-full max-w-[160px]"
+        />
+        <p className="mt-3 truncate border-t border-slate-800 pt-3 text-center text-[11px] font-medium uppercase tracking-[0.14em] text-slate-400">
+          {HOSPITAL_NAME}
+        </p>
       </div>
 
       <nav className="flex-1 space-y-0.5 overflow-y-auto px-3 py-4">
@@ -31,7 +39,7 @@ export function Sidebar({ role, onNavigate }: { role: UserRole; onNavigate?: () 
               className={cn(
                 "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
                 active
-                  ? "bg-teal-600 text-white"
+                  ? "bg-blue-700 text-white"
                   : "text-slate-300 hover:bg-slate-800 hover:text-white"
               )}
             >

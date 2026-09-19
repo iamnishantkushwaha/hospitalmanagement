@@ -34,12 +34,12 @@ export default async function LabOrdersPage() {
               {orders.map((order) => (
                 <tr key={order.id} className="hover:bg-slate-50">
                   <td className="px-4 py-2.5">
-                    <Link href={`/laboratory/orders/${order.id}`} className="font-mono text-xs text-teal-700 hover:underline">
+                    <Link href={`/laboratory/orders/${order.id}`} className="font-mono text-xs text-blue-800 hover:underline">
                       {order.orderNo}
                     </Link>
                   </td>
                   <td className="px-4 py-2.5">
-                    <Link href={`/patients/${order.patientId}`} className="font-medium text-slate-800 hover:text-teal-700">
+                    <Link href={`/patients/${order.patientId}`} className="font-medium text-slate-800 hover:text-blue-800">
                       {order.patient.firstName} {order.patient.lastName}
                     </Link>
                   </td>
@@ -54,7 +54,7 @@ export default async function LabOrdersPage() {
                       {(order.status === "PROCESSING" || order.status === "RESULT_ENTERED") && (
                         <Link
                           href={`/laboratory/orders/${order.id}`}
-                          className="rounded-md bg-teal-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-teal-700"
+                          className="rounded-md bg-blue-700 px-2.5 py-1 text-xs font-medium text-white hover:bg-blue-800"
                         >
                           Enter Results
                         </Link>

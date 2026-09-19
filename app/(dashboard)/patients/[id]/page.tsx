@@ -96,7 +96,7 @@ export default async function PatientOverviewPage({ params }: { params: Promise<
                   const Icon = event.icon;
                   return (
                     <li key={idx} className="flex gap-3">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-50 text-teal-600">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-700">
                         <Icon className="h-4 w-4" />
                       </div>
                       <div className="min-w-0 flex-1 border-b border-slate-100 pb-4 last:border-none last:pb-0">

@@ -8,7 +8,7 @@ import type { Department, Doctor, User } from "@prisma/client";
 const TIME_SLOTS = ["09:00-09:30", "09:30-10:00", "10:00-10:30", "10:30-11:00", "11:00-11:30", "14:00-14:30", "14:30-15:00", "15:00-15:30", "16:00-16:30", "16:30-17:00"];
 
 const inputClass =
-  "w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600";
+  "w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 outline-none focus:border-blue-700 focus:ring-1 focus:ring-blue-700";
 
 type PatientOption = { id: string; firstName: string; lastName: string; mrn: string };
 type DoctorOption = Doctor & { user: User; department: Department };
@@ -100,7 +100,7 @@ export function AppointmentForm({ patients, doctors }: { patients: PatientOption
             <button
               type="submit"
               disabled={isPending}
-              className="rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700 disabled:opacity-60"
+              className="rounded-md bg-blue-700 px-4 py-2 text-sm font-medium text-white hover:bg-blue-800 disabled:opacity-60"
             >
               {isPending ? "Booking..." : "Book Appointment"}
             </button>

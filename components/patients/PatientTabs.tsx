@@ -29,7 +29,7 @@ export function PatientTabs({ patientId }: { patientId: string }) {
               className={cn(
                 "whitespace-nowrap border-b-2 px-3 py-2.5 text-sm font-medium transition-colors",
                 active
-                  ? "border-teal-600 text-teal-700"
+                  ? "border-blue-700 text-blue-800"
                   : "border-transparent text-slate-500 hover:border-slate-300 hover:text-slate-700"
               )}
             >

@@ -76,7 +76,7 @@ export default async function ReportsPage() {
       <Card>
         <CardHeader className="flex items-center justify-between">
           <h2 className="text-sm font-semibold text-slate-800">Revenue — Last 14 Days</h2>
-          <span className="flex items-center gap-1 text-sm font-semibold text-teal-700">
+          <span className="flex items-center gap-1 text-sm font-semibold text-blue-800">
             <IndianRupee className="h-4 w-4" />
             {totalRevenue.toLocaleString("en-IN")}
           </span>

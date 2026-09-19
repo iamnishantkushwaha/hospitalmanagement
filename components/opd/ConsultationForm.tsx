@@ -7,7 +7,7 @@ import { Card, CardBody } from "@/components/ui/Card";
 import type { LabTest, Medicine } from "@prisma/client";
 
 const inputClass =
-  "w-full rounded-md border border-slate-300 px-2.5 py-1.5 text-sm text-slate-900 outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600";
+  "w-full rounded-md border border-slate-300 px-2.5 py-1.5 text-sm text-slate-900 outline-none focus:border-blue-700 focus:ring-1 focus:ring-blue-700";
 
 type PrescriptionRow = {
   medicineId: string;
@@ -152,7 +152,7 @@ export function ConsultationForm({
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
             {labTests.map((test) => (
               <label key={test.id} className="flex items-center gap-2 rounded-md border border-slate-100 px-2.5 py-1.5 text-sm hover:bg-slate-50">
-                <input type="checkbox" checked={selectedTests.has(test.id)} onChange={() => toggleTest(test.id)} className="accent-teal-600" />
+                <input type="checkbox" checked={selectedTests.has(test.id)} onChange={() => toggleTest(test.id)} className="accent-blue-700" />
                 {test.name}
               </label>
             ))}
@@ -166,7 +166,7 @@ export function ConsultationForm({
         <button
           type="submit"
           disabled={isPending}
-          className="rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700 disabled:opacity-60"
+          className="rounded-md bg-blue-700 px-4 py-2 text-sm font-medium text-white hover:bg-blue-800 disabled:opacity-60"
         >
           {isPending ? "Saving..." : "Save Consultation"}
         </button>

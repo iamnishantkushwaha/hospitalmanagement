@@ -10,7 +10,7 @@ export function DispenseButton({ prescriptionItemId }: { prescriptionItemId: str
     <button
       disabled={isPending}
       onClick={() => startTransition(() => dispensePrescriptionItemAction(prescriptionItemId))}
-      className="rounded-md bg-teal-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-teal-700 disabled:opacity-50"
+      className="rounded-md bg-blue-700 px-2.5 py-1 text-xs font-medium text-white hover:bg-blue-800 disabled:opacity-50"
     >
       {isPending ? "Dispensing..." : "Dispense"}
     </button>

@@ -19,7 +19,7 @@ const COLOR_MAP: Record<string, string> = {
   ORDERED: "bg-sky-50 text-sky-700 ring-sky-200",
   SAMPLE_COLLECTED: "bg-amber-50 text-amber-700 ring-amber-200",
   PROCESSING: "bg-violet-50 text-violet-700 ring-violet-200",
-  RESULT_ENTERED: "bg-teal-50 text-teal-700 ring-teal-200",
+  RESULT_ENTERED: "bg-blue-50 text-blue-800 ring-blue-200",
   VERIFIED: "bg-emerald-50 text-emerald-700 ring-emerald-200",
   // Invoice
   PENDING: "bg-amber-50 text-amber-700 ring-amber-200",

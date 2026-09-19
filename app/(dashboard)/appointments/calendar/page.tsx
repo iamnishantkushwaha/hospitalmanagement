@@ -26,9 +26,9 @@ export default async function AppointmentCalendarPage() {
           const isToday = day.getTime() === today.getTime();
           return (
             <div key={day.toISOString()} className="rounded-xl border border-slate-200 bg-white shadow-sm">
-              <div className={`border-b border-slate-100 px-3 py-2 ${isToday ? "bg-teal-50" : ""}`}>
+              <div className={`border-b border-slate-100 px-3 py-2 ${isToday ? "bg-blue-50" : ""}`}>
                 <p className="text-xs font-medium text-slate-500">{day.toLocaleDateString(undefined, { weekday: "short" })}</p>
-                <p className={`text-sm font-semibold ${isToday ? "text-teal-700" : "text-slate-800"}`}>
+                <p className={`text-sm font-semibold ${isToday ? "text-blue-800" : "text-slate-800"}`}>
                   {day.toLocaleDateString(undefined, { day: "numeric", month: "short" })}
                 </p>
               </div>
@@ -40,7 +40,7 @@ export default async function AppointmentCalendarPage() {
                     <Link
                       key={appt.id}
                       href={`/patients/${appt.patientId}`}
-                      className="block rounded-md border border-slate-100 p-2 text-xs hover:border-teal-200 hover:bg-teal-50"
+                      className="block rounded-md border border-slate-100 p-2 text-xs hover:border-blue-200 hover:bg-blue-50"
                     >
                       <p className="font-medium text-slate-700">{appt.timeSlot}</p>
                       <p className="truncate text-slate-600">{appt.patient.firstName} {appt.patient.lastName}</p>

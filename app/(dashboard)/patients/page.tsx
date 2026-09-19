@@ -42,7 +42,7 @@ export default async function PatientsPage({
         action={
           <Link
             href="/patients/new"
-            className="inline-flex items-center gap-1.5 rounded-md bg-teal-600 px-3 py-2 text-sm font-medium text-white hover:bg-teal-700"
+            className="inline-flex items-center gap-1.5 rounded-md bg-blue-700 px-3 py-2 text-sm font-medium text-white hover:bg-blue-800"
           >
             <Plus className="h-4 w-4" />
             New Patient
@@ -59,7 +59,7 @@ export default async function PatientsPage({
               name="q"
               defaultValue={q}
               placeholder="Search by name, MRN or phone..."
-              className="w-full rounded-md border border-slate-300 py-2 pl-9 pr-3 text-sm outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600 sm:w-80"
+              className="w-full rounded-md border border-slate-300 py-2 pl-9 pr-3 text-sm outline-none focus:border-blue-700 focus:ring-1 focus:ring-blue-700 sm:w-80"
             />
           </form>
         </div>
@@ -87,12 +87,12 @@ export default async function PatientsPage({
                 {patients.map((patient) => (
                   <tr key={patient.id} className="hover:bg-slate-50">
                     <td className="px-4 py-2.5">
-                      <Link href={`/patients/${patient.id}`} className="font-mono text-xs text-teal-700 hover:underline">
+                      <Link href={`/patients/${patient.id}`} className="font-mono text-xs text-blue-800 hover:underline">
                         {patient.mrn}
                       </Link>
                     </td>
                     <td className="px-4 py-2.5">
-                      <Link href={`/patients/${patient.id}`} className="font-medium text-slate-800 hover:text-teal-700">
+                      <Link href={`/patients/${patient.id}`} className="font-medium text-slate-800 hover:text-blue-800">
                         {patient.firstName} {patient.lastName}
                       </Link>
                     </td>

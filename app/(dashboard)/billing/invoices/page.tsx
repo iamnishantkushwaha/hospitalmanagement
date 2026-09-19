@@ -17,7 +17,7 @@ export default async function InvoicesPage() {
       <div className="flex justify-end">
         <Link
           href="/billing/invoices/new"
-          className="inline-flex items-center gap-1.5 rounded-md bg-teal-600 px-3 py-2 text-sm font-medium text-white hover:bg-teal-700"
+          className="inline-flex items-center gap-1.5 rounded-md bg-blue-700 px-3 py-2 text-sm font-medium text-white hover:bg-blue-800"
         >
           <Plus className="h-4 w-4" />
           New Invoice
@@ -43,12 +43,12 @@ export default async function InvoicesPage() {
                 {invoices.map((invoice) => (
                   <tr key={invoice.id} className="hover:bg-slate-50">
                     <td className="px-4 py-2.5">
-                      <Link href={`/billing/invoices/${invoice.id}`} className="font-mono text-xs text-teal-700 hover:underline">
+                      <Link href={`/billing/invoices/${invoice.id}`} className="font-mono text-xs text-blue-800 hover:underline">
                         {invoice.invoiceNo}
                       </Link>
                     </td>
                     <td className="px-4 py-2.5">
-                      <Link href={`/patients/${invoice.patientId}`} className="font-medium text-slate-800 hover:text-teal-700">
+                      <Link href={`/patients/${invoice.patientId}`} className="font-medium text-slate-800 hover:text-blue-800">
                         {invoice.patient.firstName} {invoice.patient.lastName}
                       </Link>
                     </td>

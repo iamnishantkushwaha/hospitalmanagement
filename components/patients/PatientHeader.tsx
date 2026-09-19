@@ -14,7 +14,7 @@ export function PatientHeader({ patient }: { patient: Patient }) {
     <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-4">
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-teal-600 text-lg font-semibold text-white">
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blue-700 text-lg font-semibold text-white">
             {patient.firstName.charAt(0)}
             {patient.lastName.charAt(0)}
           </div>

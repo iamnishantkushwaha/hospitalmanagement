@@ -17,7 +17,7 @@ export default async function AdmissionsPage() {
       <div className="flex justify-end">
         <Link
           href="/ipd/admissions/new"
-          className="inline-flex items-center gap-1.5 rounded-md bg-teal-600 px-3 py-2 text-sm font-medium text-white hover:bg-teal-700"
+          className="inline-flex items-center gap-1.5 rounded-md bg-blue-700 px-3 py-2 text-sm font-medium text-white hover:bg-blue-800"
         >
           <Plus className="h-4 w-4" />
           New Admission
@@ -46,7 +46,7 @@ export default async function AdmissionsPage() {
                   <tr key={adm.id} className="hover:bg-slate-50">
                     <td className="px-4 py-2.5 font-mono text-xs text-slate-500">{adm.admissionNo}</td>
                     <td className="px-4 py-2.5">
-                      <Link href={`/patients/${adm.patientId}`} className="font-medium text-slate-800 hover:text-teal-700">
+                      <Link href={`/patients/${adm.patientId}`} className="font-medium text-slate-800 hover:text-blue-800">
                         {adm.patient.firstName} {adm.patient.lastName}
                       </Link>
                     </td>

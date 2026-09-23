@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { HeartPulse } from "lucide-react";
 import { NAV_ITEMS, HOSPITAL_NAME } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import type { UserRole } from "@prisma/client";
@@ -14,16 +14,12 @@ export function Sidebar({ role, onNavigate }: { role: UserRole; onNavigate?: () 
   return (
     <div className="flex h-full flex-col bg-slate-950 text-slate-200">
       <div className="border-b border-slate-800 px-5 pb-4 pt-5">
-        <Image
-          src="/adrs-logo-light.png"
-          alt="ADRS Techno – Innovative & Tech"
-          width={470}
-          height={220}
-          priority
-          className="mx-auto h-auto w-full max-w-[160px]"
-        />
+        <div className="flex items-center justify-center gap-2 text-white">
+          <HeartPulse className="h-6 w-6 text-blue-400" />
+          <span className="text-base font-semibold">{HOSPITAL_NAME}</span>
+        </div>
         <p className="mt-3 truncate border-t border-slate-800 pt-3 text-center text-[11px] font-medium uppercase tracking-[0.14em] text-slate-400">
-          {HOSPITAL_NAME}
+          Patient Management System
         </p>
       </div>
 

@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Activity, BedDouble, FlaskConical, LogIn, Receipt, Stethoscope, Users } from "lucide-react";
+import { Activity, BedDouble, FlaskConical, HeartPulse, LogIn, Receipt, Stethoscope, Users } from "lucide-react";
 import { HOSPITAL_NAME } from "@/lib/constants";
 
 const FEATURES = [
@@ -17,15 +16,10 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
       <div className="relative hidden w-[45%] shrink-0 overflow-hidden bg-slate-900 lg:flex lg:flex-col lg:justify-between lg:p-10">
         <div className="relative">
           <div className="flex flex-col items-start gap-3">
-            <Image
-              src="/adrs-logo-light.png"
-              alt="ADRS Techno – Innovative & Tech"
-              width={470}
-              height={220}
-              priority
-              className="h-auto w-52"
-            />
-            <span className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">{HOSPITAL_NAME}</span>
+            <div className="flex items-center gap-2 text-white">
+              <HeartPulse className="h-7 w-7 text-blue-400" />
+              <span className="text-lg font-semibold">{HOSPITAL_NAME}</span>
+            </div>
           </div>
 
           <h1 className="mt-16 max-w-md text-3xl font-semibold leading-tight text-white">
@@ -53,14 +47,9 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
       <div className="flex flex-1 flex-col items-center justify-center overflow-hidden bg-slate-50 px-4 py-6 lg:bg-white">
         <div className="w-full max-w-sm">
           <div className="mb-5 text-center lg:hidden">
-            <Image
-              src="/adrs-logo-dark.png"
-              alt="ADRS Techno – Innovative & Tech"
-              width={470}
-              height={220}
-              priority
-              className="mx-auto mb-3 h-auto w-40"
-            />
+            <div className="mx-auto mb-3 flex items-center justify-center gap-2 text-slate-900">
+              <HeartPulse className="h-7 w-7 text-blue-700" />
+            </div>
             <h1 className="text-lg font-semibold text-slate-900">{HOSPITAL_NAME}</h1>
             <p className="text-sm text-slate-500">Hospital &amp; Patient Management System</p>
           </div>

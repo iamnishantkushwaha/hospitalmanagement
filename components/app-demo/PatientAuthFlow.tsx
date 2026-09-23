@@ -214,6 +214,21 @@ export function PatientAuthFlow() {
   const [details, setDetails] = useState<Details>({ phone: "", dob: "", firstName: "", lastName: "" });
   const [devOtp, setDevOtp] = useState<string | undefined>(undefined);
 
+  useEffect(() => {
+    window.history.replaceState({ screen: "welcome" }, "");
+
+    const onPopState = (e: PopStateEvent) => {
+      setScreen((e.state?.screen as Screen) ?? "welcome");
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  function goTo(next: Screen) {
+    window.history.pushState({ screen: next }, "");
+    setScreen(next);
+  }
+
   const title = screen === "welcome" ? "Sunrise Hospital" : screen === "otp-details" ? "Enter details" : "Verify number";
 
   return (
@@ -233,20 +248,20 @@ export function PatientAuthFlow() {
           )}
 
           <div key={screen} className="app-fade-in flex flex-1 flex-col overflow-hidden">
-            {screen === "welcome" && <WelcomeScreen onRegister={() => setScreen("otp-details")} />}
+            {screen === "welcome" && <WelcomeScreen onRegister={() => goTo("otp-details")} />}
             {screen === "otp-details" && (
               <OtpDetailsScreen
                 details={details}
                 setDetails={setDetails}
-                onBack={() => setScreen("welcome")}
+                onBack={() => window.history.back()}
                 onSent={(otp) => {
                   setDevOtp(otp);
-                  setScreen("otp-verify");
+                  goTo("otp-verify");
                 }}
               />
             )}
             {screen === "otp-verify" && (
-              <OtpVerifyScreen details={details} devOtp={devOtp} onBack={() => setScreen("otp-details")} />
+              <OtpVerifyScreen details={details} devOtp={devOtp} onBack={() => window.history.back()} />
             )}
           </div>
 

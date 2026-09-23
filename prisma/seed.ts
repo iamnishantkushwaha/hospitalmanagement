@@ -219,6 +219,12 @@ async function main() {
     }
   }
 
+  const patientUser = await db.user.upsert({
+    where: { email: "patient@demo.local" },
+    update: { name: "John Doe", role: "PATIENT", passwordHash },
+    create: { email: "patient@demo.local", name: "John Doe", role: "PATIENT", passwordHash },
+  });
+
   const rajSharmaUser = staffAccounts.get("doctor@demo.local")!;
   const rajSharma = await db.doctor.upsert({
     where: { userId: rajSharmaUser.id },
@@ -291,7 +297,7 @@ async function main() {
 
   const johnDoe = await db.patient.upsert({
     where: { mrn: "PAT-000000" },
-    update: {},
+    update: { userId: patientUser.id },
     create: {
       mrn: "PAT-000000",
       firstName: "John",
@@ -302,6 +308,7 @@ async function main() {
       phone: "9876500000",
       email: "john.doe@example.demo",
       address: "221B MG Road, Bengaluru",
+      userId: patientUser.id,
     },
   });
   patients.unshift(johnDoe);

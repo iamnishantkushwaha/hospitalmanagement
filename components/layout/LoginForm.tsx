@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState, useRef, useState } from "react";
+import Link from "next/link";
 import {
   ArrowRight,
   FlaskConical,
@@ -10,6 +11,7 @@ import {
   Pill,
   Receipt,
   ShieldCheck,
+  Smartphone,
   Stethoscope,
   UserCog,
 } from "lucide-react";
@@ -125,6 +127,20 @@ export function LoginForm({ callbackUrl }: { callbackUrl: string }) {
           })}
         </div>
       </div>
+
+      <Link
+        href="/patient-app"
+        className="flex items-center gap-3 rounded-2xl border border-blue-100 bg-blue-50/50 p-4 shadow-sm shadow-slate-200/60 transition hover:border-blue-200 hover:bg-blue-50"
+      >
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-700 text-white">
+          <Smartphone className="h-5 w-5" />
+        </div>
+        <div className="min-w-0 flex-1">
+          <p className="text-sm font-medium text-slate-800">Patient App</p>
+          <p className="text-xs text-slate-500">Sign in or register right inside the app.</p>
+        </div>
+        <ArrowRight className="h-4 w-4 shrink-0 text-blue-700" />
+      </Link>
     </div>
   );
 }

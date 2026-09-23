@@ -11,6 +11,8 @@ import {
   Receipt,
   BarChart3,
   Settings,
+  Smartphone,
+  UserCheck,
   type LucideIcon,
 } from "lucide-react";
 
@@ -43,7 +45,9 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Laboratory", href: "/laboratory", icon: FlaskConical, roles: ["ADMIN", "DOCTOR", "LAB_TECHNICIAN"] },
   { label: "Pharmacy", href: "/pharmacy", icon: Pill, roles: ["ADMIN", "PHARMACIST"] },
   { label: "Billing", href: "/billing", icon: Receipt, roles: ["ADMIN", "BILLING_STAFF", "RECEPTIONIST"] },
+  { label: "Self-registrations", href: "/patient-registrations", icon: UserCheck, roles: ["ADMIN", "RECEPTIONIST"] },
   { label: "Reports", href: "/reports", icon: BarChart3, roles: ["ADMIN"] },
+  { label: "Mobile App Demo", href: "/patient-app", icon: Smartphone, roles: [...ALL_STAFF_ROLES, "PATIENT"] },
   { label: "Settings", href: "/settings", icon: Settings, roles: ["ADMIN"] },
 ];
 
